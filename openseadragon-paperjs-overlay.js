@@ -6,14 +6,18 @@
 
 (function() {
 
-    if (!window.OpenSeadragon) {
-        console.error('[openseadragon-canvas-overlay] requires OpenSeadragon');
-        return;
+    var $ = window.OpenSeadragon;
+
+    if (!$) {
+        $ = require('openseadragon');
+        if (!$) {
+            throw new Error('OpenSeadragon is missing.');
+        }
     }
 
 
     // ----------
-    OpenSeadragon.Viewer.prototype.paperjsOverlay = function() {
+    $.Viewer.prototype.paperjsOverlay = function() {
         if (this._paperjsOverlayInfo) {
             return this._paperjsOverlayInfo;
         }
