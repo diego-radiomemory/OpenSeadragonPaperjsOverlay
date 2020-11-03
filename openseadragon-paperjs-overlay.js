@@ -30,7 +30,7 @@
   // ----------
   var Overlay = function (viewer) {
     var self = this;
-    console.log(viewer)
+  
     this._viewer = viewer;
 
     this._containerWidth = 0;
