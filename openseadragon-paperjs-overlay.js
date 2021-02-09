@@ -103,7 +103,7 @@
       var image1 = this._viewer.world.getItemAt(0);
 
       this._paperScope.view.zoom = image1.viewportToImageZoom(viewportZoom);
-      var center = this._viewer.viewport.viewportToImageCoordinates(this._viewer.viewport.getCenter(true));
+      var center = image1.viewportToImageCoordinates(this._viewer.viewport.getCenter(true));
        this._paperScope.view.center = new paper.Point(center.x, center.y);
     }
   };
